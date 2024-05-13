@@ -1,13 +1,61 @@
 body {
   margin: 0;
+  font-family: "Georgia";
 }
 
 #navbar {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-  }
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Wyrównanie w pionie */
+  background-color: black;
+  width: 100%;
+}
+
+.main-navbar {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; /* Wypełnia przestrzeń między .main-navbar a .sm-navbar */
+}
+
+.main-navbar a {
+  color: white;
+  text-align: center;
+  padding: 8px 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  position: relative;
+  transition: all .2s ease-out;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.sm-navbar {
+  display: flex;
+  align-items: center;
+}
+
+.sm-navbar a {
+  margin: 0 10px;
+}
+
+/* Dla obrazków wewnątrz .sm-navbar */
+.sm-navbar img {
+  height: 24px;
+}
+
+.main-navbar img {
+  height: 24px;
+}
+
+
+  /* Change color on hover */
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  transition: all .2s ease-out;
+}
 
 .sticky {
   position: fixed;
@@ -15,34 +63,87 @@ body {
   width: 100%;
 }
 
-.content {
+.logo-bar {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+}
+
+.logo {
+  margin-right: auto; /* Ustawia logo na lewej stronie */
+  margin-left: auto; /* Ustawia logo na prawej stronie */
+  height: auto;
+  width: 7%;
+}
+
+.sm-icons {
+  margin-left: auto;
+}
+
+.sm-icons img {
+  height: 24px;
+}
+
+.test {
+  background-image: url("img/bg.jpeg");
+  background-size: cover;
+  position: relative;
+  min-height: 1005px;
   padding: 16px;
 }
-  /* Navbar links */
-  #navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-decoration: none;
-    position: relative;
-  }
 
-  /* Change color on hover */
-  #navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+.test::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(12, 12, 12, 0.97); /* Adjust the alpha value (last parameter) for the desired transparency */
+}
 
-  #navbar a:hover::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 2px;
-      background-color: white; /* Change color as needed */
+.content {
+  position: relative;
+  z-index: 1; /* Ensure content appears above the background */
+  padding: 20px; /* Adjust padding as needed */
+  color: #fff; /* Adjust text color as needed */
+}
+
+.sticky + .test {
+  padding-top: 51px;
+}
+
+.footer {
+  background-image: url("img/footer.png");
+  min-height: 600px;
+}
+
+.grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+        gap: 20px; /* Gap between grid items */
+        padding: 50px 50px 50px 50px;
+    }
+.grid-item-img {
+  text-align: right;
+}
+.grid-item-p {
+  text-align: left;
+}
+    /* CSS for the image */
+    .grid-item-img img {
+        max-width: 400px; /* Ensure the image doesn't exceed its container */
+        margin-right: 50px;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* CSS for the text */
+    .grid-item-p p {
+      margin-left: 50px;
+      margin-right: 50px;
+        font-size: 20px;
+        line-height: 1.5;
     }
