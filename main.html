@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="gallery.css">
     <script src="scripts.js" charset="utf-8"></script>
+
   </head>
   <body>
     <div class="logo-bar">
@@ -12,17 +16,16 @@
     </div>
     <div id="navbar" class="navbar">
       <div class="main-navbar">
-        <a href="#">Strona Główna</a>
+        <a href="#" onclick="scrollToTop()" id="navbar-home">Strona Główna</a>
         <a href="#">Cennik</a>
         <a href="#">Usługi</a>
         <a href="#">Rezerwacja</a>
         <a href="#">Galeria</a>
-        <a href="#">Kontakt</a>
+        <a href="#" onclick="scrollToFooter()" id="navbar-contact">Kontakt</a>
       </div>
     </div>
-    <div class="test">
+    <div class="content-background">
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div class="grid-container">
           <div class="grid-item-img">
             <img src="img/grid.jpeg" alt="">
@@ -31,92 +34,90 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
+        <div class="gallery-container">
+          <div class="gallery-title">
+            <h2>GALERIA</h2>
+          </div>
+          <div class="gallery">
+            <div class="gallery-item">
+              <img src="img/gallery/g1.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g2.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g3.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g4.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g5.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g6.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g7.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g8.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g9.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g10.jpeg" alt="">
+            </div>
+            <div class="gallery-item">
+              <img src="img/gallery/g11.jpeg" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="footer">
-
-    </div>
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-contact column">
+            <div class="footer-contact-content">
+              <h3>KONTAKT</h3>
+              <h4>Numer telefonu</h4>
+              <p><a href="tel:+48737168079">737 168 079</a></p>
+              <p><a href="tel:+48737168079">737 168 079</a></p>
+              <h4>E-mail</h4>
+              <a href="mailto:orzeldetailing@gmail.com">orzeldetailing@gmail.com</a>
+            </div>
+          </div>
+          <div class="footer-x column">
+            <div class="footer-x-content">
+              <h3>Usługi</h3>
+              <p>dupa</p>
+              <p>dupa</p>
+            </div>
+          </div>
+          <div class="footer-address column">
+            <div class="footer-address-content">
+              <h3>ADRES</h3>
+              <iframe
+              width="450"
+              height="250"
+              frameborder="0" style="border:0"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA7d78b_2z_BBDUODkh0c5l3N4KBceo78s
+              &q=Orzeł+Detailing+|+Auto+Spa"
+              allowfullscreen>
+              </iframe>
+              <p>ul. Wereszczakówny 12, 05-260 Marki</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-linker column">
+            <img src="img/logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
