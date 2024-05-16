@@ -36,7 +36,7 @@
             background-color: white;
             transform: scaleY(65%) translateY(-10%);
         }
-        .footer-x::after {
+        .footer-linker::after {
                     content: '';
                     position: absolute;
                     top: 10%;
@@ -62,7 +62,11 @@
 }
 
 .footer-contact h4 {
-  margin-top: 50px;
+  margin-top: 30px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 50px;
 }
 
 .footer-address iframe {
@@ -73,9 +77,10 @@
 
 .footer-address {
 }
-.footer-linker {
+.footer-bottom {
   padding-top: 0;
 }
+
 
 .address-label {
   text-align: left;

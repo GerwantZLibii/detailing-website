@@ -17,10 +17,11 @@
     <div id="navbar" class="navbar">
       <div class="main-navbar">
         <a href="#" onclick="scrollToTop()" id="navbar-home">Strona Główna</a>
+        <a href="#">Oferta</a>
+        <a href="#">Realizacje</a>
         <a href="#">Cennik</a>
-        <a href="#">Usługi</a>
-        <a href="#">Rezerwacja</a>
-        <a href="#">Galeria</a>
+        <a href="#" onclick="scrollToGallery()" id="navbar-gallery">Galeria</a>
+        <a href="#">O nas</a>
         <a href="#" onclick="scrollToFooter()" id="navbar-contact">Kontakt</a>
       </div>
     </div>
@@ -74,6 +75,73 @@
             </div>
           </div>
         </div>
+        <div class="grid-container" id="gallery">
+          <div class="grid-item-img">
+            <img src="img/grid.jpeg" alt="">
+          </div>
+          <div class="grid-item-p">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+        <div class="gallery-container">
+  <div class="gallery-title">
+    <h2>Galeria</h2>
+  </div>
+  <div class="gallery-wrapper">
+    <button class="gallery-nav left" onclick="scrollGalleryLeft()">&#10094;</button>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="img/gallery/g1.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g2.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g3.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g4.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g5.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g6.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g7.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g8.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g9.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g10.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img/gallery/g11.jpeg" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="img1.jpg" alt="Opis 1">
+        <div class="gallery-text">
+          <h3>Tytuł 1</h3>
+          <p>Opis 1</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="img2.jpg" alt="Opis 2">
+        <div class="gallery-text">
+          <h3>Tytuł 2</h3>
+          <p>Opis 2</p>
+        </div>
+      </div>
+      <!-- Dodaj więcej elementów gallery-item -->
+    </div>
+    <button class="gallery-nav right" onclick="scrollGalleryRight()">&#10095;</button>
+  </div>
+</div>
       </div>
     </div>
     <footer id="footer">
@@ -89,8 +157,8 @@
               <a href="mailto:orzeldetailing@gmail.com">orzeldetailing@gmail.com</a>
             </div>
           </div>
-          <div class="footer-x column">
-            <div class="footer-x-content">
+          <div class="footer-linker column">
+            <div class="footer-linker-content">
               <h3>Usługi</h3>
               <p>dupa</p>
               <p>dupa</p>
@@ -113,7 +181,7 @@
           </div>
         </div>
         <div class="footer-row">
-          <div class="footer-linker column">
+          <div class="footer-bottom column">
             <img src="img/logo.png" alt="">
           </div>
         </div>

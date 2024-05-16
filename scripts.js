@@ -1,14 +1,17 @@
-function scrollToFooter() {
-  var footer = document.getElementById("footer");
-  footer.scrollIntoView({ behavior: "smooth" });
-}
-
 function scrollToTop() {
   var top = document.body;
   top.scrollIntoView({ behavior: "smooth" });
 }
 
+function scrollToGallery() {
+  var gallery = document.getElementById("gallery");
+  gallery.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
+function scrollToFooter() {
+  var footer = document.getElementById("footer");
+  footer.scrollIntoView({ behavior: "smooth" });
+}
 
 document.addEventListener("DOMContentLoaded", function() {
         // Tutaj umieść swój skrypt
@@ -34,4 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
             scrollToTop();
         });
+
+        document.getElementById("navbar-gallery").addEventListener('click', function(event) {
+            event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+            scrollToGallery();
+        });
+
+
     });
