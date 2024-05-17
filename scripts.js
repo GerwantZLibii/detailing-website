@@ -5,7 +5,7 @@ function scrollToTop() {
 
 function scrollToGallery() {
   var gallery = document.getElementById("gallery");
-  gallery.scrollIntoView({ behavior: "smooth", block: "start" });
+  gallery.scrollIntoView({ behavior: "smooth"});
 }
 
 function scrollToFooter() {
