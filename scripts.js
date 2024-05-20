@@ -23,8 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
         function myFunction() {
             if (window.scrollY >= sticky) {
                 navbar.classList.add("sticky");
+                navbar.classList.remove("absolute");
             } else {
                 navbar.classList.remove("sticky");
+                navbar.classList.add("absolute");
             }
         }
 
@@ -43,5 +45,31 @@ document.addEventListener("DOMContentLoaded", function() {
             scrollToGallery();
         });
 
+
+
+        const elements = document.querySelectorAll('.slide-in');
+
+  function isElementInViewport(el, offset = 100) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) - offset &&
+      rect.left >= 0 &&
+      rect.bottom >= 0 &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function handleScroll() {
+    elements.forEach(element => {
+      if (isElementInViewport(element)) {
+        element.classList.add('slide-in-visible');
+      }
+    });
+  }
+
+  // Listen for scroll and call the handleScroll function
+  window.addEventListener('scroll', handleScroll);
+  // Initial check in case elements are already in view
+  handleScroll();
 
     });

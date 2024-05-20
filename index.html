@@ -14,7 +14,7 @@
     <div class="logo-bar">
       <img class="logo" src="img/logo.png" alt="">
     </div>
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar absolute">
       <div class="main-navbar">
         <a href="#" onclick="scrollToTop()" id="navbar-home">Strona Główna</a>
         <a href="#">Oferta</a>
@@ -26,7 +26,7 @@
     </div>
     <div class="content-background">
       <div class="content">
-        <div class="grid-container">
+        <div class="grid-container section">
           <div class="grid-item-img">
             <img src="img/grid.jpeg" alt="">
           </div>
@@ -34,59 +34,16 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
-        <div class="gallery-container">
-          <div class="gallery-title">
-            <h2>GALERIA</h2>
-          </div>
-          <div class="gallery">
-            <div class="gallery-item">
-              <img src="img/gallery/g1.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g2.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g3.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g4.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g5.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g6.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g7.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g8.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g9.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g10.jpeg" alt="">
-            </div>
-            <div class="gallery-item">
-              <img src="img/gallery/g11.jpeg" alt="">
-            </div>
-          </div>
-        </div>
-        <div class="grid-container">
-          <div class="grid-item-img">
-            <img src="img/grid.jpeg" alt="">
-          </div>
-          <div class="grid-item-p">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </div>
-        <div class="gallery-container" id="gallery">
-  <div class="gallery-title">
+        <div class="gallery-container section" id="gallery">
+  <div class="section-title slide-in">
     <h2>Realizacje</h2>
   </div>
-  <div class="gallery-wrapper">
+    <div class="gallery-categories slide-in">
+      <button type="button" name="button">usluga1</button>
+      <button type="button" name="button">usluga2</button>
+      <button type="button" name="button">usluga3</button>
+    </div>
+  <div class="gallery-wrapper slide-in">
     <div class="gallery">
       <div class="gallery-item">
         <img src="img/gallery/g1.jpeg" alt="">
@@ -121,23 +78,15 @@
       <div class="gallery-item">
         <img src="img/gallery/g11.jpeg" alt="">
       </div>
-      <div class="gallery-item">
-        <img src="img1.jpg" alt="Opis 1">
-        <div class="gallery-text">
-          <h3>Tytuł 1</h3>
-          <p>Opis 1</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="img2.jpg" alt="Opis 2">
-        <div class="gallery-text">
-          <h3>Tytuł 2</h3>
-          <p>Opis 2</p>
-        </div>
-      </div>
-      <!-- Dodaj więcej elementów gallery-item -->
     </div>
   </div>
+</div>
+<div class="sm-feed-container">
+  <div class="section-title slide-in">
+    <h2>O nas</h2>
+  </div>
+  <iframe class="slide-in facebook-iframe" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61556391789907&tabs=timeline&width=600&height=435&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+    width="600" height="435" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
 </div>
       </div>
     </div>
@@ -145,7 +94,7 @@
       <div class="footer-container">
         <div class="footer-row">
           <div class="footer-contact column">
-            <div class="footer-contact-content">
+            <div class="footer-contact-content slide-in">
               <h3>KONTAKT</h3>
               <h4>Numer telefonu</h4>
               <p><a href="tel:+48737168079">737 168 079</a></p>
@@ -155,14 +104,14 @@
             </div>
           </div>
           <div class="footer-linker column">
-            <div class="footer-linker-content">
+            <div class="footer-linker-content slide-in">
               <h3>Usługi</h3>
               <p>dupa</p>
               <p>dupa</p>
             </div>
           </div>
           <div class="footer-address column">
-            <div class="footer-address-content">
+            <div class="footer-address-content slide-in">
               <h3>ADRES</h3>
               <iframe
               width="450"

@@ -20,6 +20,10 @@ body {
   width: 7%;
 }
 
+.absolute {
+  position: absolute;
+}
+
 #navbar {
   z-index: 999;
   overflow: hidden;
@@ -78,8 +82,8 @@ body {
   width: 100%;
 }
 
-.sticky + .logo-bar {
-  padding-bottom: 120px;
+.sticky + .content {
+  margin-top: 120px;
 }
 
 .content-background {
@@ -112,6 +116,7 @@ body {
 }
 
 .grid-container {
+  position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two columns with equal width */
         gap: 20px; /* Gap between grid items */
@@ -160,7 +165,73 @@ body {
         background: #5A5A5A;
     }
 
+    .sm-feed-container {
+      background-color: rgba(25, 25, 25, 1);
+      padding: 50px 100px 100px 100px;
+      position: relative;
+    }
 
+.section::before {
+  z-index: 9999;
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  transform: translateX(-50%);
+}
+
+    .section-title {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      margin-bottom: 75px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      color: white;
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .section-title h2::before {
+      content: '';
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      width: calc(100% + 20px);
+      height: 3px;
+      background-color: white;
+      transform: translateX(-50%);
+    }
+
+    /* Initial state of the elements */
+    .slide-in {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    /* Animated state when the element is in view */
+    .slide-in-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .facebook-iframe {
+      width: 100%;
+      max-width: 600px; /* Adjust based on your design */
+      height: 435px; /* Adjust based on the height specified in the iframe URL */
+      border: none; /* Remove border */
+      overflow: hidden; /* Hide overflow */
+      margin: 20px 0; /* Add some margin if needed */
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Add transition for slide-in effect */
+    }
 
 
 .content {
