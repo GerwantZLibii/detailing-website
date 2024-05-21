@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         const elements = document.querySelectorAll('.slide-in');
+        const elements2 = document.querySelectorAll('.line-anim');
 
   function isElementInViewport(el, offset = 100) {
     const rect = el.getBoundingClientRect();
@@ -63,6 +64,11 @@ document.addEventListener("DOMContentLoaded", function() {
     elements.forEach(element => {
       if (isElementInViewport(element)) {
         element.classList.add('slide-in-visible');
+      }
+    });
+    elements2.forEach(element => {
+      if (isElementInViewport(element)) {
+        element.classList.add('line-anim-visible');
       }
     });
   }
