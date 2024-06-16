@@ -39,15 +39,17 @@
 .gallery {
   background-color: rgba(40, 40, 40, 1);
   display: flex;
-  flex-wrap: nowrap;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
   transition: transform 0.5s ease;
   padding: 15px;
+  justify-content: center;
 }
 
 .gallery-item {
-  flex: 1 0 auto;
-  width: 300px;
+  flex: 1 1 calc(20% - 20px);
+  max-width: calc(20% - 20px);
+  /*width: 300px;*/
   border-radius: 10px;
   object-fit: cover;
   overflow: hidden;
