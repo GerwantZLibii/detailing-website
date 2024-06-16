@@ -157,7 +157,7 @@ body {
     }
 
     .sm-feed-container {
-      background-color: rgba(25, 25, 25, 1);
+      /*background-color: rgba(25, 25, 25, 1);*/
       padding: 50px 100px 100px 100px;
       position: relative;
     }
@@ -248,11 +248,17 @@ body {
   flex-direction: column;
 }
 
+.offer-container {
+  background-color: rgba(25, 25, 25, 1);
+  padding: 50px 100px 100px 100px;
+  position: relative;
+}
 
 .offer-grid {
+  overflow: hidden;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
   height: 750px;
   
 }
@@ -262,6 +268,46 @@ body {
   text-align: center;
   position: relative;
   background-color: lightgray;
+}
+
+.item1 {
+  background: url("img/offer/car.JPG") center center;
+  background-size: cover;
+}
+
+.item2 {
+  background: url("img/offer/lakier.JPG") center center;
+  background-size: cover;
+}
+
+.item3 {
+  background: url("img/offer/powloki.JPG") center center;
+  background-size: cover;
+}
+
+.item4 {
+  background: url("img/offer/folie.JPG") center center;
+  background-size: cover;
+}
+
+.item5 {
+  background: url("img/offer/clean.JPG") center center;
+  background-size: cover;
+}
+
+.item6 {
+  background: url("img/offer/tapicera.JPG") center center;
+  background-size: cover;
+}
+
+.item7 {
+  background: url("img/offer/wgniecenia.JPG") center center;
+  background-size: cover;
+}
+
+.item8 {
+  background: url("img/offer/other.JPG") center center;
+  background-size: cover;
 }
 
 .offer-grid-item::before {
