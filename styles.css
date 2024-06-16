@@ -249,6 +249,65 @@ body {
 }
 
 
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  height: 750px;
+  
+}
+
+.offer-grid-item {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  background-color: lightgray;
+}
+
+.offer-grid-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 12, 0.5); /* Adjust the alpha value (last parameter) for the desired transparency */
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.offer-grid-item:hover::before {
+  background-color: rgba(12, 12, 12, 0);
+}
+
+.offer-grid-item a {
+  position: absolute; /* Position the link absolutely within the container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure the link is on top */
+  text-align: center; /* Center the text horizontally */
+  line-height: 100px; /* Center the text vertically, adjust to container height */
+  text-decoration: none; /* Remove underline */
+  color: white;
+  background-color: rgba(255, 255, 255, 0); /* Transparent background to avoid covering container's background */
+  display: flex; /* Use flexbox to center text vertically and horizontally */
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto; /* Ensure the link is clickable */
+}
+
+.offer-grid-item:nth-last-child(2) {
+  grid-column: span 1;
+}
+
+.offer-grid-item:last-child {
+  grid-column: span 2;
+}
+
+
+
 
 
 /* FOOTER */
