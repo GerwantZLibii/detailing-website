@@ -14,8 +14,10 @@ body {
 }
 
 .logo {
-  margin-right: auto; /* Ustawia logo na lewej stronie */
-  margin-left: auto; /* Ustawia logo na prawej stronie */
+  margin-right: auto;
+  /* Ustawia logo na lewej stronie */
+  margin-left: auto;
+  /* Ustawia logo na prawej stronie */
   height: auto;
   width: 7%;
 }
@@ -29,7 +31,8 @@ body {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Wyrównanie w pionie */
+  align-items: center;
+  /* Wyrównanie w pionie */
   background-color: black;
   width: 100%;
 }
@@ -44,7 +47,8 @@ body {
 .main-navbar {
   display: flex;
   justify-content: center;
-  flex-grow: 1; /* Wypełnia przestrzeń między .main-navbar a .sm-navbar */
+  flex-grow: 1;
+  /* Wypełnia przestrzeń między .main-navbar a .sm-navbar */
 }
 
 .main-navbar a {
@@ -60,10 +64,13 @@ body {
 }
 
 .main-navbar a::after {
-  content: '•'; /* Ustawienie kropki */
+  content: '•';
+  /* Ustawienie kropki */
   position: absolute;
-  right: -13px; /* Pozycja kropki na prawo od linku */
-  color: white; /* Dopasuj kolor kropki */
+  right: -13px;
+  /* Pozycja kropki na prawo od linku */
+  color: white;
+  /* Dopasuj kolor kropki */
   pointer-events: none;
 }
 
@@ -96,71 +103,92 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.9); /* Adjust the alpha value (last parameter) for the desired transparency */
+  background-color: rgba(12, 12, 12, 0.9);
+  /* Adjust the alpha value (last parameter) for the desired transparency */
   z-index: 1;
 }
 
-.background-section > * {
+.background-section>* {
   position: relative;
-  z-index: 2; /* Treść sekcji powinna być nad filtrem */
+  z-index: 2;
+  /* Treść sekcji powinna być nad filtrem */
 }
 
 
 .grid-container {
   position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-        gap: 20px; /* Gap between grid items */
-        padding: 50px;
-    }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns with equal width */
+  gap: 20px;
+  /* Gap between grid items */
+  padding: 50px;
+}
+
 .grid-item-img {
   text-align: right;
 }
+
 .grid-item-p {
   text-align: left;
 }
-    /* CSS for the image */
-    .grid-item-img img {
-        max-width: 400px; /* Ensure the image doesn't exceed its container */
-        margin-right: 50px;
-        height: auto; /* Maintain aspect ratio */
-    }
 
-    /* CSS for the text */
-    .grid-item-p p {
-      margin-left: 50px;
-      margin-right: 50px;
-        font-size: 20px;
-        line-height: 1.5;
-    }
+/* CSS for the image */
+.grid-item-img img {
+  max-width: 400px;
+  /* Ensure the image doesn't exceed its container */
+  margin-right: 50px;
+  height: auto;
+  /* Maintain aspect ratio */
+}
 
-    /* Cały scrollbar */
-    ::-webkit-scrollbar {
-        width: 12px;
-        height: 12px;
-    }
+/* CSS for the text */
+.grid-item-p p {
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 20px;
+  line-height: 1.5;
+}
 
-    /* Track (tło paska przewijania) */
-    ::-webkit-scrollbar-track {
-        background: #1A1A1A;
-    }
+/* Cały scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
 
-    /* Handle (uchwyt paska przewijania) */
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 2px;
-    }
+/* Track (tło paska przewijania) */
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
 
-    /* Handle na hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: #5A5A5A;
-    }
+/* Handle (uchwyt paska przewijania) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
 
-    .sm-feed-container {
-      /*background-color: rgba(25, 25, 25, 1);*/
-      padding: 50px 100px 100px 100px;
-      position: relative;
-    }
+/* Handle na hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5A5A5A;
+}
+
+.about-container {
+  background-color: rgba(25, 25, 25, 1);
+  padding: 50px 0;
+  position: relative;
+}
+
+.about-content {
+  padding: 50px 100px 100px 100px;
+}
+
+.test {
+  background: url("img/antek.JPG") center 60%;
+  background-size: cover;
+  overflow: hidden;
+  height: 500px;
+  width: auto;
+}
 
 .section::before {
   z-index: 9999;
@@ -176,68 +204,77 @@ body {
 
 
 .line-anim .section-title {
-    position: relative;
-  }
-  
-  .line-anim h2::before {
-    content: '';
-    position: absolute;
-    top: 120%; /* Adjust as needed */
-    left: 50%;
-    width: calc(100% + 20px); /* Adjust width as needed */
-    height: 3px; /* Adjust height as needed */
-    background-color: white; /* Adjust color as needed */
-    transform: translateX(-50%) scaleX(0%);
-    transform-origin: center;
-    transition: transform 0.6s ease-out;
-  }
-  
-  .line-anim-visible h2::before {
-    transform: translateX(-50%) scaleX(100%);
-  }
-  
+  position: relative;
+}
+
+.line-anim h2::before {
+  content: '';
+  position: absolute;
+  top: 120%;
+  /* Adjust as needed */
+  left: 50%;
+  width: calc(100% + 20px);
+  /* Adjust width as needed */
+  height: 3px;
+  /* Adjust height as needed */
+  background-color: white;
+  /* Adjust color as needed */
+  transform: translateX(-50%) scaleX(0%);
+  transform-origin: center;
+  transition: transform 0.6s ease-out;
+}
+
+.line-anim-visible h2::before {
+  transform: translateX(-50%) scaleX(100%);
+}
 
 
 
-    .section-title {
-      justify-content: center;
-      display: flex;
-      align-items: center;
-      margin-bottom: 75px;
-    }
 
-    .section-title h2 {
-      color: white;
-      margin: 0;
-      font-size: 28px;
-      font-weight: bold;
-      position: relative;
-    }
+.section-title {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 75px;
+}
+
+.section-title h2 {
+  color: white;
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+}
 
 
-    /* Initial state of the elements */
-    .slide-in {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
+/* Initial state of the elements */
+.slide-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
-    /* Animated state when the element is in view */
-    .slide-in-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/* Animated state when the element is in view */
+.slide-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .facebook-iframe {
-      width: 100%;
-      max-width: 600px; /* Adjust based on your design */
-      height: 435px; /* Adjust based on the height specified in the iframe URL */
-      border: none; /* Remove border */
-      overflow: hidden; /* Hide overflow */
-      margin: 20px 0; /* Add some margin if needed */
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Add transition for slide-in effect */
-    }
-
+.facebook-iframe {
+  width: 100%;
+  max-width: 600px;
+  /* Adjust based on your design */
+  height: 435px;
+  /* Adjust based on the height specified in the iframe URL */
+  border: 5px solid;
+  /* Remove border */
+  overflow: hidden;
+  /* Hide overflow */
+  margin: 20px 0;
+  /* Add some margin if needed */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  /* Add transition for slide-in effect */
+}
 
 .content {
   position: relative;
@@ -256,18 +293,35 @@ body {
 
 .offer-grid {
   overflow: hidden;
-  border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 750px;
-  
+
 }
 
 .offer-grid-item {
+  border: solid 1px;
+  font-size: 20px;
   padding: 20px;
   text-align: center;
   position: relative;
   background-color: lightgray;
+}
+
+.offer-grid-item:first-child {
+  border-top-left-radius: 10px;
+}
+
+.offer-grid-item:nth-last-child(6) {
+  border-top-right-radius: 10px;
+}
+
+.offer-grid-item:nth-last-child(2) {
+  border-bottom-left-radius: 10px;
+}
+
+.offer-grid-item:last-child {
+  border-bottom-right-radius: 10px;
 }
 
 .item1 {
@@ -317,7 +371,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.5); /* Adjust the alpha value (last parameter) for the desired transparency */
+  background-color: rgba(12, 12, 12, 0.5);
+  /* Adjust the alpha value (last parameter) for the desired transparency */
   z-index: 1;
   transition: 0.5s ease-in-out;
 }
@@ -326,22 +381,36 @@ body {
   background-color: rgba(12, 12, 12, 0);
 }
 
+.offer-grid-item:hover a {
+  /*color: #ababab;*/
+  font-size: 25px;
+}
+
 .offer-grid-item a {
-  position: absolute; /* Position the link absolutely within the container */
+  position: absolute;
+  /* Position the link absolutely within the container */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensure the link is on top */
-  text-align: center; /* Center the text horizontally */
-  line-height: 100px; /* Center the text vertically, adjust to container height */
-  text-decoration: none; /* Remove underline */
+  z-index: 1;
+  /* Ensure the link is on top */
+  text-align: center;
+  /* Center the text horizontally */
+  line-height: 100px;
+  /* Center the text vertically, adjust to container height */
+  text-decoration: none;
+  /* Remove underline */
   color: white;
-  background-color: rgba(255, 255, 255, 0); /* Transparent background to avoid covering container's background */
-  display: flex; /* Use flexbox to center text vertically and horizontally */
+  background-color: rgba(255, 255, 255, 0);
+  /* Transparent background to avoid covering container's background */
+  display: flex;
+  /* Use flexbox to center text vertically and horizontally */
   align-items: center;
   justify-content: center;
-  pointer-events: auto; /* Ensure the link is clickable */
+  pointer-events: auto;
+  /* Ensure the link is clickable */
+  transition: 0.3s ease-in-out;
 }
 
 .offer-grid-item:nth-last-child(2) {
@@ -351,8 +420,6 @@ body {
 .offer-grid-item:last-child {
   grid-column: span 2;
 }
-
-
 
 
 
@@ -412,6 +479,10 @@ body {
   background-color: white;
 }
 
+.footer-linker p {
+  margin-top: 25px;
+}
+
 .footer-linker::after {
   content: '';
   position: absolute;
@@ -427,6 +498,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .column {
   padding: 20px;
   box-sizing: border-box;
@@ -457,4 +529,69 @@ body {
 
 .address-label {
   text-align: left;
+}
+
+
+
+
+
+
+
+.sm-link {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  bottom: 10%;
+  width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sm-link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sm-link a svg {
+  width: 30px;
+  fill: #ffffff;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.sm-link .instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040);
+  border-radius: 0 10px 0 0;
+}
+
+.sm-link .facebook {
+  background-color: #006aff;
+  border-radius: 0 0 10px 0;
+}
+
+.sm-link a:hover {
+  width: 175%;
+  border-radius: 0 10px 10px 0;
+}
+
+.sm-link a:hover p{
+  transform: translateX(0);
+  opacity: 100%;
+}
+
+.sm-link a:hover svg{
+  opacity: 0;
+}
+
+.sm-link p {
+  transform: translateX(-100px);
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+  position: absolute;
 }
