@@ -3,9 +3,19 @@ function scrollToTop() {
   top.scrollIntoView({ behavior: "smooth" });
 }
 
+function scrollToOffer() {
+  var footer = document.getElementById("offer");
+  footer.scrollIntoView({ behavior: "smooth" });
+}
+
 function scrollToGallery() {
   var gallery = document.getElementById("gallery");
   gallery.scrollIntoView({ behavior: "smooth"});
+}
+
+function scrollToAbout() {
+  var footer = document.getElementById("about");
+  footer.scrollIntoView({ behavior: "smooth" });
 }
 
 function scrollToFooter() {
@@ -30,21 +40,31 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        document.getElementById("navbar-contact").addEventListener('click', function(event) {
-            event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
-            scrollToFooter();
-        });
 
         document.getElementById("navbar-home").addEventListener('click', function(event) {
             event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
             scrollToTop();
         });
 
+        document.getElementById("navbar-offer").addEventListener('click', function(event) {
+          event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+          scrollToOffer();
+      });
+
         document.getElementById("navbar-gallery").addEventListener('click', function(event) {
             event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
             scrollToGallery();
         });
 
+        document.getElementById("navbar-about").addEventListener('click', function(event) {
+          event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+          scrollToAbout();
+      });
+
+        document.getElementById("navbar-contact").addEventListener('click', function(event) {
+          event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+          scrollToFooter();
+      });
 
 
         const elements = document.querySelectorAll('.slide-in');
