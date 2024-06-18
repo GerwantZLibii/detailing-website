@@ -23,7 +23,49 @@ function scrollToFooter() {
   footer.scrollIntoView({ behavior: "smooth" });
 }
 
+function onlyfura() {
+  var wszystko = Array.from(document.getElementsByClassName("gallery-item"));
+  var more = Array.from(document.getElementsByClassName("more"));
+  wszystko.splice(wszystko.indexOf(more), 1);
+  var fury = Array.from(document.getElementsByClassName("fura"));
+  wszystko.forEach(element => {
+    element.classList.add("non-display");
+  });
+  fury.forEach(element => {
+    element.classList.remove("non-display");
+  });
+}
+
+function wszystko() {
+  var wszystko = Array.from(document.getElementsByClassName("gallery-item"));
+  var more = Array.from(document.getElementsByClassName("more"));
+  wszystko.splice(wszystko.indexOf(more), 1);
+  wszystko.forEach(element => {
+    element.classList.remove("non-display");
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll('.gallery-category-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Usuwamy klasę 'active' z wszystkich przycisków
+      buttons.forEach(btn => btn.classList.remove('active'));
+      // Dodajemy klasę 'active' do klikniętego przycisku
+      button.classList.add('active');
+
+      if (button.id === 'gallery-category-all') {
+        wszystko(); // Wywołujemy funkcję wszystko()
+      } else if (button.id === 'gallery-category-onlyfury') {
+        onlyfura(); // Wywołujemy funkcję onlyfura()
+      }
+
+    });
+  });
+
+
+
         // Tutaj umieść swój skrypt
         window.onscroll = function() { myFunction() };
 
