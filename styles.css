@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: "Georgia";
+  /*font-family: "Georgia";*/
+    font-family: 'Alata';
   color: white;
 }
 
@@ -103,7 +104,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   /* Adjust the alpha value (last parameter) for the desired transparency */
   z-index: 1;
 }
@@ -190,6 +191,18 @@ body {
   width: auto;
 }
 
+.test::before {
+  content: '';
+  position: absolute;
+  top: 35.8%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(12, 12, 12, 0.75);
+  /* Adjust the alpha value (last parameter) for the desired transparency */
+  z-index: 1;
+}
+
 .section::before {
   z-index: 9999;
   content: '';
@@ -200,6 +213,10 @@ body {
   height: 2px;
   background-color: gray;
   transform: translateX(-50%);
+}
+
+.section:last-child:before {
+  height: 0;
 }
 
 
@@ -309,19 +326,67 @@ body {
 }
 
 .offer-grid-item:first-child {
-  border-top-left-radius: 10px;
+  border-top-left-radius: 15px;
+}
+
+.offer-grid-item:first-child::before {
+  content: '';
+  position: absolute;
+  border-top-left-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
 }
 
 .offer-grid-item:nth-last-child(6) {
-  border-top-right-radius: 10px;
+  border-top-right-radius: 15px;
+}
+
+.offer-grid-item:nth-last-child(6)::before {
+  content: '';
+  position: absolute;
+  border-top-right-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
 }
 
 .offer-grid-item:nth-last-child(2) {
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 15px;
+}
+
+.offer-grid-item:nth-last-child(2)::before {
+  content: '';
+  position: absolute;
+  border-bottom-left-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
 }
 
 .offer-grid-item:last-child {
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 15px;
+}
+
+.offer-grid-item:last-child::before {
+  content: '';
+  position: absolute;
+  border-bottom-right-radius: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
 }
 
 .item1 {
@@ -371,19 +436,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   /* Adjust the alpha value (last parameter) for the desired transparency */
   z-index: 1;
   transition: 0.5s ease-in-out;
 }
 
-.offer-grid-item:hover::before {
-  background-color: rgba(12, 12, 12, 0);
-}
-
 .offer-grid-item:hover a {
   /*color: #ababab;*/
   font-size: 25px;
+}
+
+.offer-grid-item:hover::before {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .offer-grid-item a {
@@ -526,12 +591,18 @@ body {
   padding-top: 0;
 }
 
-
 .address-label {
   text-align: left;
 }
 
-
+.company-info::before {
+  content: '';
+  background-color: white;
+  width: 200px;
+  height: 1px;
+  position: absolute;
+  transform: translateX(-50%);
+}
 
 
 
@@ -574,7 +645,7 @@ body {
 }
 
 .sm-link a:hover {
-  width: 175%;
+  width: 185%;
   border-radius: 0 10px 10px 0;
 }
 
@@ -595,3 +666,129 @@ body {
   transition: all 0.15s ease-in-out;
   position: absolute;
 }
+
+.sm-link .facebook p {
+  width: 110px;
+  transform: translateX(-100px);
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  transition: all 0.15s ease-in-out;
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+.service-title {
+      width: 100%;
+      height: 400px; /* Fixed height */
+      background: url("img/offer/other.JPG") center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: To make text stand out */
+      position: relative;
+      z-index: 1;
+}
+
+.service-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height of the gradient as needed */
+  background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 30%);
+  z-index: -1; /* To place it behind the main content */
+}
+
+.service-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust the height of the gradient as needed */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(25, 25, 25, 1) 80%);
+  z-index: -1; /* To place it behind the main content */
+}
+
+.service-title h1 {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the ::before pseudo-element */
+  padding: 10px 20px; /* Optional: Add padding around the text */
+  display: inline-block; /* Ensure the h2 width is only as wide as the text */
+}
+
+.service-title h2 {
+  position: relative;
+  z-index: 1; /* Ensure the text is above the ::before pseudo-element */
+  padding: 10px 20px; /* Optional: Add padding around the text */
+  display: inline-block; /* Ensure the h2 width is only as wide as the text */
+}
+
+.service-title h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Adjust the alpha value (last parameter) for the desired transparency */
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.service-container {
+  position: relative;
+}
+
+.service-content {
+  display: flex;
+  text-align: left;
+  background-color: rgba(25, 25, 25, 1);
+  padding: 0 350px 0 350px;
+}
+
+.service-content-description {
+  margin-right: 200px;
+}
+
+.service-content-info {
+  display: flex;
+}
+
+.service-content-info h3 {
+  width: 138px;
+}
+
+.service-content-paragraph {
+  margin-bottom: 50px;
+}
+
+p, li {
+  color: rgb(190, 190, 190);
+}
+
+strong {
+  color: rgb(255, 255, 255);
+}
+
+hr {
+  background-color:  rgb(190, 190, 190);
+}
+
+
+
+
+
+

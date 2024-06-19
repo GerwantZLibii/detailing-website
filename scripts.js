@@ -10,7 +10,7 @@ function scrollToOffer() {
 
 function scrollToGallery() {
   var gallery = document.getElementById("gallery");
-  gallery.scrollIntoView({ behavior: "smooth"});
+  gallery.scrollIntoView({ behavior: "smooth" });
 }
 
 function scrollToAbout() {
@@ -45,19 +45,23 @@ function wszystko() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('.gallery-category-btn');
 
   buttons.forEach(button => {
     button.addEventListener('click', () => {
       // Usuwamy klasę 'active' z wszystkich przycisków
-      buttons.forEach(btn => btn.classList.remove('active'));
+      buttons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.classList.add('non-active');
+      });
       // Dodajemy klasę 'active' do klikniętego przycisku
       button.classList.add('active');
+      button.classList.remove('non-active');
 
-      if (button.id === 'gallery-category-all') {
+      if (button.id === "gallery-category-all") {
         wszystko(); // Wywołujemy funkcję wszystko()
-      } else if (button.id === 'gallery-category-onlyfury') {
+      } else if (button.id === "gallery-category-onlyfury") {
         onlyfura(); // Wywołujemy funkcję onlyfura()
       }
 
@@ -66,51 +70,59 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-        // Tutaj umieść swój skrypt
-        window.onscroll = function() { myFunction() };
+  // Tutaj umieść swój skrypt
+  window.onscroll = function () { myFunction() };
 
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
 
-        function myFunction() {
-            if (window.scrollY >= sticky) {
-                navbar.classList.add("sticky");
-                navbar.classList.remove("absolute");
-            } else {
-                navbar.classList.remove("sticky");
-                navbar.classList.add("absolute");
-            }
-        }
-
-
-        document.getElementById("navbar-home").addEventListener('click', function(event) {
-            event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
-            scrollToTop();
-        });
-
-        document.getElementById("navbar-offer").addEventListener('click', function(event) {
-          event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
-          scrollToOffer();
-      });
-
-        document.getElementById("navbar-gallery").addEventListener('click', function(event) {
-            event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
-            scrollToGallery();
-        });
-
-        document.getElementById("navbar-about").addEventListener('click', function(event) {
-          event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
-          scrollToAbout();
-      });
-
-        document.getElementById("navbar-contact").addEventListener('click', function(event) {
-          event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
-          scrollToFooter();
-      });
+  function myFunction() {
+    if (window.scrollY >= sticky) {
+      navbar.classList.add("sticky");
+      navbar.classList.remove("absolute");
+    } else {
+      navbar.classList.remove("sticky");
+      navbar.classList.add("absolute");
+    }
+  }
 
 
-        const elements = document.querySelectorAll('.slide-in');
-        const elements2 = document.querySelectorAll('.line-anim');
+  document.getElementById("navbar-home").addEventListener('click', function (event) {
+    event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+    scrollToTop();
+  });
+
+  try {
+    document.getElementById("navbar-offer").addEventListener('click', function (event) {
+      event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+      scrollToOffer();
+    });
+  } catch (error) {
+
+  }
+
+  document.getElementById("navbar-gallery").addEventListener('click', function (event) {
+    event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+    scrollToGallery();
+  });
+
+  try {
+    document.getElementById("navbar-about").addEventListener('click', function (event) {
+      event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+      scrollToAbout();
+    });
+  } catch (error) {
+
+  }
+
+  document.getElementById("navbar-contact").addEventListener('click', function (event) {
+    event.preventDefault(); // Zapobiega domyślnej akcji przeglądarki
+    scrollToFooter();
+  });
+
+
+  const elements = document.querySelectorAll('.slide-in');
+  const elements2 = document.querySelectorAll('.line-anim');
 
   function isElementInViewport(el, offset = 100) {
     const rect = el.getBoundingClientRect();
@@ -140,4 +152,4 @@ document.addEventListener("DOMContentLoaded", function() {
   // Initial check in case elements are already in view
   handleScroll();
 
-    });
+});
