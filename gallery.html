@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Realizacje - Orzeł Detailing</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="gallery.css">
+    <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+    <script src="scripts.js" charset="utf-8"></script>
+    <script src="gallery-lightbox.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div class="logo-bar">
+      <img class="logo" src="img/logo.png" alt="">
+    </div>
+    <div id="navbar" class="navbar absolute">
+      <div class="main-navbar">
+        <a href="#" onclick="scrollToTop()" id="navbar-home">Strona Główna</a>
+        <a href="#">Oferta</a>
+        <a href="#" onclick="scrollToGallery()" id="navbar-gallery">Realizacje</a>
+        <a href="#">O nas</a>
+        <a href="#" onclick="scrollToFooter()" id="navbar-contact">Kontakt</a>
+      </div>
+    </div>
+    <div class="content-background">
+      <div class="content">
+        <div class="realisations-container">
+            <div class="service-title">
+              <h1>Realizacje</h1>
+            </div>
+            <div class="realisations-grid">
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/1.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(1)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/2.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(2)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/3.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(3)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/4.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(4)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/5.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(5)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/6.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(6)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/7.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(7)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/8.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(8)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/9.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(9)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/10.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(10)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/11.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(11)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="realisation-item">
+                    <div class="realisation-item-photo">
+                        <img src="img/realisations/12.JPG" alt="">
+                        <div class="overlay">
+                            <div class="text">PLACEHOLDER</div>
+                            <button class="zoom-button" onclick="openLightbox();currentSlide(12)">Powiększ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="lightbox" class="lightbox">
+        <span class="close cursor" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="lightbox-slide">
+                <img src="img/realisations/1.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/2.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/3.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/4.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/5.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/6.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/7.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/8.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/9.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/10.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/11.JPG" style="width:100%">
+            </div>
+            <div class="lightbox-slide">
+                <img src="img/realisations/12.JPG" style="width:100%">
+            </div>
+            <!-- Dodaj więcej slajdów w razie potrzeby -->
+    
+            <!-- Przycisk poprzedni/następny -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div class="footer-container">
+          <div class="footer-row">
+            <div class="footer-contact column">
+              <h3>KONTAKT</h3>
+              <div class="footer-contact-content slide-in">
+                <h4>Numer telefonu</h4>
+                <p><a href="tel:+48737168079">737 168 079</a></p>
+                <p><a href="tel:+48737168079">737 168 079</a></p>
+                <h4>E-mail</h4>
+                <a href="mailto:orzeldetailing@gmail.com">orzeldetailing@gmail.com</a>
+              </div>
+            </div>
+            <div class="footer-linker column">
+              <h3>USŁUGI</h3>
+              <div class="footer-linker-content slide-in">
+                <p><a href="car-care.html">Kompleksowa pielęgnacja aut</a></p>
+                <p><a href="paint-renovation.html">Renowacja lakieru</a></p>
+                <p><a href="ceramic-coatings.html">Powłoki ceramiczne</a></p>
+                <p><a href="protective-foils.html">Folie ochronne PPF</a></p>
+                <p><a href="detailing-washing.html">Mycie detailingowe</a></p>
+                <p><a href="upholstery-washing.html">Pranie tapicerek</a></p>
+                <p><a href="dent-removal.html">Usuwanie wgnieceń metodą PDR</a></p>
+                <p><a href="offer.html">Cała oferta</a></p>
+              </div>
+            </div>
+            <div class="footer-address column">
+              <h3>ADRES</h3>
+              <div class="footer-address-content slide-in">
+                <iframe width="450" height="250" frameborder="0" style="border:0"
+                  referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA7d78b_2z_BBDUODkh0c5l3N4KBceo78s
+                  &q=Orzeł+Detailing+|+Auto+Spa" allowfullscreen>
+                </iframe>
+                <p><a href="https://www.google.com/maps?cid=18431486381702067998">ul. Wereszczakówny 12, 05-260 Marki</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-row">
+            <div class="footer-bottom column company-info">
+              <h3>Dane firmy</h3>
+              <p>Bartosz Adamczyk, Antonii Orzeł</p>
+              <p>Orzeł Detailing | Auto Spa</p>
+              <p>NIP</p>
+            </div>
+          </div>
+          <div class="footer-row">
+            <div class="footer-bottom column">
+              <img src="img/logo.png" alt="">
+            </div>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>

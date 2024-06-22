@@ -23,6 +23,29 @@ function scrollToFooter() {
   footer.scrollIntoView({ behavior: "smooth" });
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function onlyfura() {
   var wszystko = Array.from(document.getElementsByClassName("gallery-item"));
   var more = Array.from(document.getElementsByClassName("more"));
@@ -44,6 +67,9 @@ function wszystko() {
     element.classList.remove("non-display");
   });
 }
+
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('.gallery-category-btn');
@@ -152,4 +178,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial check in case elements are already in view
   handleScroll();
 
+
+
+
+
+
+
+
+
+
+  
 });
+
+
+
+
