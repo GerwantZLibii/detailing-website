@@ -68,7 +68,7 @@ body {
   content: '•';
   /* Ustawienie kropki */
   position: absolute;
-  right: -13px;
+  right: -15px;
   /* Pozycja kropki na prawo od linku */
   color: white;
   /* Dopasuj kolor kropki */
@@ -91,7 +91,7 @@ body {
 }
 
 .content-background {
-  background-image: url("img/bg.jpg");
+  background-image: url("img/bg.jpeg");
   background-size: contain;
   position: relative;
   width: 100%;
@@ -114,6 +114,26 @@ body {
   z-index: 2;
   /* Treść sekcji powinna być nad filtrem */
 }
+
+
+.intro {
+  position: relative;
+  width: 100%;
+}
+
+#header-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 1.2s;
+}
+
+.shrink {
+  scale: 50%;
+  border-radius: 25px;
+}
+
 
 
 .grid-container {
@@ -180,7 +200,22 @@ body {
 }
 
 .about-content {
-  padding: 50px 100px 100px 100px;
+  padding: 0px 100px 0px 100px;
+  display: flex;
+}
+
+.about-content-left {
+  background: url("img/antek.JPG") center center;
+  width: 25%;
+}
+
+.about-content-center {
+  padding: 0px 50px 100px 50px;
+}
+
+.about-content-right {
+  background: url("img/bartek.png") center center;
+  width: 25%;
 }
 
 .test {
@@ -215,7 +250,7 @@ body {
   transform: translateX(-50%);
 }
 
-.section:last-child:before {
+.section:last-child::before {
   height: 0;
 }
 
@@ -312,12 +347,13 @@ body {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
   height: 750px;
 
 }
 
 .offer-grid-item {
-  border: solid 1px;
+  /*border: solid 1px;*/
   font-size: 20px;
   padding: 20px;
   text-align: center;
@@ -341,11 +377,11 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-.offer-grid-item:nth-last-child(6) {
+.offer-grid-item:nth-child(3) {
   border-top-right-radius: 15px;
 }
 
-.offer-grid-item:nth-last-child(6)::before {
+.offer-grid-item:nth-child(3)::before {
   content: '';
   position: absolute;
   border-top-right-radius: 15px;
@@ -357,11 +393,11 @@ body {
   transition: 0.5s ease-in-out;
 }
 
-.offer-grid-item:nth-last-child(2) {
+.offer-grid-item:nth-last-child(3) {
   border-bottom-left-radius: 15px;
 }
 
-.offer-grid-item:nth-last-child(2)::before {
+.offer-grid-item:nth-last-child(3)::before {
   content: '';
   position: absolute;
   border-bottom-left-radius: 15px;
@@ -395,36 +431,41 @@ body {
 }
 
 .item2 {
-  background: url("img/offer/lakier.JPG") center center;
+  background: url("img/offer/wnetrza.JPG") center center;
   background-size: cover;
 }
 
 .item3 {
-  background: url("img/offer/powloki.JPG") center center;
+  background: url("img/offer/lakier.JPG") center center;
   background-size: cover;
 }
 
 .item4 {
-  background: url("img/offer/folie.JPG") center center;
+  background: url("img/offer/powloki.JPG") center center;
   background-size: cover;
 }
 
 .item5 {
-  background: url("img/offer/clean.JPG") center center;
+  background: url("img/offer/folie.JPG") center center;
   background-size: cover;
 }
 
 .item6 {
-  background: url("img/offer/tapicera.JPG") center center;
+  background: url("img/offer/clean.JPG") center center;
   background-size: cover;
 }
 
 .item7 {
-  background: url("img/offer/wgniecenia.JPG") center center;
+  background: url("img/offer/tapicera.JPG") center center;
   background-size: cover;
 }
 
 .item8 {
+  background: url("img/offer/wgniecenia.JPG") center center;
+  background-size: cover;
+}
+
+.item9 {
   background: url("img/offer/other.JPG") center center;
   background-size: cover;
 }
@@ -476,14 +517,6 @@ body {
   pointer-events: auto;
   /* Ensure the link is clickable */
   transition: 0.3s ease-in-out;
-}
-
-.offer-grid-item:nth-last-child(2) {
-  grid-column: span 1;
-}
-
-.offer-grid-item:last-child {
-  grid-column: span 2;
 }
 
 
@@ -540,12 +573,13 @@ body {
   top: 10%;
   width: 1px;
   left: 33.3333333334%;
-  transform: scaleY(65%) translateY(-10%);
+  transform: scaleY(65%);
   background-color: white;
 }
 
 .footer-linker p {
-  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-top: 0;
 }
 
 .footer-linker::after {
@@ -556,7 +590,7 @@ body {
   left: 66.6666666667%;
   width: 1px;
   background-color: white;
-  transform: scaleY(65%) translateY(-10%);
+  transform: scaleY(65%);
 }
 
 .footer-row:last-child {
@@ -578,7 +612,7 @@ body {
   margin-top: 30px;
 }
 
-.footer-contact h3 {
+.footer-first-row h3 {
   margin-bottom: 50px;
 }
 
@@ -886,19 +920,18 @@ hr {
   text-align: center;
 }
 
-.zoom-button {
+.transparent-button {
   background: transparent;
   border: 2px solid white;
   border-radius: 5px;
   color: white;
-  margin-top: 20px;
   padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.zoom-button:hover {
+.transparent-button:hover {
   background-color: white;
   color: black;
 }
@@ -991,4 +1024,141 @@ hr {
     text-align: center;
     padding: 2px 16px;
     color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-container {
+  margin-top: 100px;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 50px 20px 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-options {
+  width: 30%;
+}
+
+.contact-method,
+.contact-form {
+  background-color: rgba(25, 25, 25, 1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-method {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-method:last-child {
+  margin-bottom: 0;
+}
+
+.contact-form {
+  flex: 2;
+  max-width: 600px;
+}
+
+.contact-method h3,
+.contact-form h3 {
+  margin-bottom: 10px;
+}
+
+.contact-method a {
+  margin-bottom: 20px;
+  transition: all .2s ease-out;
+}
+
+.contact-method a:hover {
+  color: #5A5A5A;
+}
+
+.contact-method a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.contact-method button{
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, width 0.3s ease-in-out;
+}
+
+.contact-form button[type="submit"] {
+  padding: 5px 30px 5px 30px;
+}
+
+.contact-method .contact-messenger {
+  background-color: #006aff;
+}
+
+.contact-method .contact-instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040);
+}
+
+.contact-method button:hover {
+  width: 65%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+input[type="email"],
+input[type="tel"],
+textarea {
+  text-align: center;
+  font-family: 'Alata';
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #5A5A5A;
 }

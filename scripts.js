@@ -71,6 +71,14 @@ function wszystko() {
 
 
 
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll('.gallery-category-btn');
 
@@ -96,14 +104,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  window.addEventListener('scroll', function() {
+    var videoContainer = document.getElementById('header-video');
+    console.log(window.scrollY);
+    if (window.scrollY > 250) {
+        videoContainer.classList.add('shrink');
+    } else {
+        videoContainer.classList.remove('shrink');
+    }
+  });
+
+
+
   // Tutaj umieść swój skrypt
   window.onscroll = function () { myFunction() };
 
   var navbar = document.getElementById("navbar");
+  var logobar = document.getElementById("logo-bar");
   var sticky = navbar.offsetTop;
 
   function myFunction() {
-    if (window.scrollY >= sticky) {
+    if (!isElementInViewport(logobar)) {
       navbar.classList.add("sticky");
       navbar.classList.remove("absolute");
     } else {
@@ -186,10 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
+ 
   
 });
-
-
-
 

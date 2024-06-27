@@ -6,7 +6,6 @@
   <title>Orzeł Detailing</title>
   <link rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="footer.css">
   <link rel="stylesheet" href="gallery.css">
   <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
   <script src="scripts.js" charset="utf-8"></script>
@@ -14,7 +13,7 @@
 </head>
 
 <body>
-  <div class="logo-bar">
+  <div class="logo-bar" id="logo-bar">
     <img class="logo" src="img/logo.png" alt="">
   </div>
   <div id="navbar" class="navbar absolute">
@@ -49,7 +48,10 @@
   </div>
   <div class="content-background">
     <div class="content">
-      <div class="grid-container section">
+      <div class="intro section" id="intro">
+        <video src="img/intro.mp4" autoplay muted loop id="header-video"></video>
+      </div>
+      <!--<div class="grid-container section">
         <div class="grid-item-img">
           <img src="img/grid.jpeg" alt="">
         </div>
@@ -60,35 +62,38 @@
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.</p>
         </div>
-      </div>
+      </div> -->
       <div class="offer-container section" id="offer">
         <div class="section-title line-anim">
           <h2>Oferta</h2>
         </div>
         <div class="offer-grid">
           <div class="offer-grid-item grid-option item1 slide-in">
-            <a href="car-care.html">Kompleksowa pielęgnacja aut</a>
+            <a href="car-care.html">Kompleksowa pielęgnacja samochodowa</a>
           </div>
           <div class="offer-grid-item grid-option item2 slide-in">
-            <a href="paint-renovation.html">Renowacja lakieru</a>
+            <a href="interior-cleaning.html">Detailingowe czyszczenie wnętrz</a>
           </div>
           <div class="offer-grid-item grid-option item3 slide-in">
-            <a href="ceramic-coatings.html">Powłoki ceramiczne</a>
+            <a href="paint-renovation.html">Renowacja lakieru</a>
           </div>
           <div class="offer-grid-item grid-option item4 slide-in">
-            <a href="protective-foils.html">Folie ochronne PPF</a>
+            <a href="ceramic-coatings.html">Powłoki ceramiczne</a>
+          </div>
+          <div class="offer-grid-item grid-option item9 slide-in">
+            <a href="offer.html">Cała oferta</a>
           </div>
           <div class="offer-grid-item grid-option item5 slide-in">
-            <a href="detailing-washing.html">Mycie detailingowe</a>
+            <a href="protective-foils.html">Folie ochronne PPF</a>
           </div>
           <div class="offer-grid-item grid-option item6 slide-in">
-            <a href="upholstery-washing.html">Pranie tapicerek</a>
+            <a href="detailing-washing.html">Mycie detailingowe</a>
           </div>
           <div class="offer-grid-item grid-option item7 slide-in">
-            <a href="dent-removal.html">Usuwanie wgnieceń metodą PDR</a>
+            <a href="upholstery-washing.html">Pranie tapicerek</a>
           </div>
           <div class="offer-grid-item grid-option item8 slide-in">
-            <a href="offer.html">Cała oferta</a>
+            <a href="dent-removal.html">Usuwanie wgnieceń metodą PDR</a>
           </div>
         </div>
       </div>
@@ -97,8 +102,10 @@
           <h2>Realizacje</h2>
         </div>
         <div class="gallery-categories slide-in">
-          <button type="button" id="gallery-category-all" name="button" class="gallery-category-btn active">wszystko</button>
-          <button type="button" id="gallery-category-onlyfury" name="button" class="gallery-category-btn non-active">onlyfura</button>
+          <button type="button" id="gallery-category-all" name="button"
+            class="gallery-category-btn active">wszystko</button>
+          <button type="button" id="gallery-category-onlyfury" name="button"
+            class="gallery-category-btn non-active">onlyfura</button>
           <button type="button" name="button" class="gallery-category-btn non-active">usluga3</button>
         </div>
         <div class="gallery-wrapper">
@@ -116,7 +123,7 @@
               <img src="img/gallery/g4.jpeg" alt="">
             </div>
             <div class="gallery-item more" style="background-color: gray;">
-              <a href="" style="height: 130px; width: 130px;"></a>
+              <a href="gallery.html" style="height: 130px; width: 130px;"></a>
             </div>
             <!-- <div class="gallery-item">
               <img src="img/gallery/g6.jpeg" alt="">
@@ -148,10 +155,38 @@
             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F61556391789907&tabs=timeline&width=600&height=435&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
             width="600" height="435" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
             allowTransparency="true" allow="encrypted-media"></iframe> -->
-        </div>
-        <div>
-          <div class="test">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit consequatur cupiditate quia debitis incidunt facere nesciunt dolorem laudantium qui, maiores necessitatibus accusamus exercitationem odio vero quis, harum distinctio placeat earum?</p>
+          <div class="about-content-left">
+
+          </div>
+          <div class="about-content-center">
+            <p class="slide-in">Witaj w Orzeł Detailing! Jesteśmy firmą z pasją do motoryzacji i troską o detale,
+              prowadzoną przez dwóch entuzjastów samochodów - Antoniego Orzeł i Bartosza Adamczyka. Naszym celem jest
+              zapewnienie najwyższej jakości usług detailingowych, które przekształcają i chronią Twój pojazd,
+              sprawiając, że wygląda on jak nowy.</p>
+
+            <h3 class="line-anim">Nasza Misja</h3>
+            <p class="slide-in">Naszą misją jest dostarczanie usług detailingowych, które przekraczają oczekiwania
+              naszych klientów. Skupiamy się na każdym szczególe, aby zapewnić, że Twój samochód jest nie tylko czysty,
+              ale także doskonale zabezpieczony przed codziennymi zagrożeniami.</p>
+
+            <h3 class="line-anim">Kim Jesteśmy?</h3>
+            <p class="slide-in">Antoni Orzeł i Bartosz Adamczyk to dwaj przyjaciele, których połączyła miłość do
+              motoryzacji. Dzięki ich wieloletniemu doświadczeniu i zaangażowaniu, Orzeł Detailing stał się synonimem
+              perfekcji i niezawodności w branży detailingowej. Jesteśmy dumni z naszych umiejętności i dbałości o każdy
+              detal, co pozwala nam oferować usługi na najwyższym poziomie.</p>
+
+            <h3 class="line-anim">Dlaczego Warto Nam Zaufać?</h3>
+            <p class="slide-in">W Orzeł Detailing wierzymy, że każdy samochód zasługuje na najlepszą opiekę. Korzystamy
+              z najnowocześniejszych technologii i najlepszych dostępnych produktów, aby zapewnić Twojemu pojazdowi nie
+              tylko nieskazitelny wygląd, ale także długotrwałą ochronę. Nasze indywidualne podejście do każdego klienta
+              i pojazdu gwarantuje, że zawsze wychodzisz od nas zadowolony.</p>
+
+            <p class="slide-in"><strong>Zaufaj Orzeł Detailing</strong> i pozwól nam zadbać o Twój samochód z pasją i
+              profesjonalizmem. Twoja satysfakcja jest dla nas najważniejsza!</p>
+
+          </div>
+          <div class="about-content-right">
+
           </div>
         </div>
       </div>
@@ -159,38 +194,41 @@
   </div>
   <footer id="footer">
     <div class="footer-container">
-      <div class="footer-row">
+      <div class="footer-row footer-first-row">
         <div class="footer-contact column">
           <h3>KONTAKT</h3>
-          <div class="footer-contact-content slide-in">
+          <div class="footer-contact-content">
             <h4>Numer telefonu</h4>
-            <p><a href="tel:+48737168079">737 168 079</a></p>
-            <p><a href="tel:+48737168079">737 168 079</a></p>
+            <p class="slide-in"><a href="tel:+48737168079">737 168 079</a></p>
+            <p class="slide-in"><a href="tel:+48737168079">737 168 079</a></p>
             <h4>E-mail</h4>
-            <a href="mailto:orzeldetailing@gmail.com">orzeldetailing@gmail.com</a>
+            <p class="slide-in"><a href="mailto:orzeldetailing@gmail.com">orzeldetailing@gmail.com</a></p>
+            <h4>Formularz kontaktowy</h4>
+            <button class="transparent-button slide-in">Napisz do nas!</button>
           </div>
         </div>
         <div class="footer-linker column">
           <h3>USŁUGI</h3>
-          <div class="footer-linker-content slide-in">
-            <p><a href="car-care.html">Kompleksowa pielęgnacja aut</a></p>
-            <p><a href="paint-renovation.html">Renowacja lakieru</a></p>
-            <p><a href="ceramic-coatings.html">Powłoki ceramiczne</a></p>
-            <p><a href="protective-foils.html">Folie ochronne PPF</a></p>
-            <p><a href="detailing-washing.html">Mycie detailingowe</a></p>
-            <p><a href="upholstery-washing.html">Pranie tapicerek</a></p>
-            <p><a href="dent-removal.html">Usuwanie wgnieceń metodą PDR</a></p>
-            <p><a href="offer.html">Cała oferta</a></p>
+          <div class="footer-linker-content">
+            <p class="slide-in"><a href="car-care.html">Kompleksowa pielęgnacja aut</a></p>
+            <p class="slide-in"><a href="paint-renovation.html">Renowacja lakieru</a></p>
+            <p class="slide-in"><a href="ceramic-coatings.html">Powłoki ceramiczne</a></p>
+            <p class="slide-in"><a href="protective-foils.html">Folie ochronne PPF</a></p>
+            <p class="slide-in"><a href="detailing-washing.html">Mycie detailingowe</a></p>
+            <p class="slide-in"><a href="upholstery-washing.html">Pranie tapicerek</a></p>
+            <p class="slide-in"><a href="dent-removal.html">Usuwanie wgnieceń metodą PDR</a></p>
+            <p class="slide-in"><a href="offer.html">Cała oferta</a></p>
           </div>
         </div>
         <div class="footer-address column">
           <h3>ADRES</h3>
-          <div class="footer-address-content slide-in">
-            <iframe width="450" height="250" frameborder="0" style="border:0"
+          <div class="footer-address-content">
+            <iframe class="slide-in" width="450" height="250" frameborder="0" style="border:0"
               referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA7d78b_2z_BBDUODkh0c5l3N4KBceo78s
               &q=Orzeł+Detailing+|+Auto+Spa" allowfullscreen>
             </iframe>
-            <p><a href="https://www.google.com/maps?cid=18431486381702067998">ul. Wereszczakówny 12, 05-260 Marki</a></p>
+            <p class="slide-in"><a href="https://www.google.com/maps?cid=18431486381702067998">ul. Wereszczakówny 12, 05-260 Marki</a>
+            </p>
           </div>
         </div>
       </div>
