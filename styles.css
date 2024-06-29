@@ -1112,7 +1112,7 @@ hr {
   border-radius: 4px;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s ease, width 0.3s ease-in-out;
+  transition: background-color 0.3s ease, width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 
 .contact-form button[type="submit"] {
@@ -1129,6 +1129,7 @@ hr {
 
 .contact-method button:hover {
   width: 65%;
+  border-radius: 10px;
 }
 
 .form-group {
