@@ -1,7 +1,7 @@
 body {
   margin: 0;
   /*font-family: "Georgia";*/
-    font-family: 'Alata';
+  font-family: 'Alata';
   color: white;
 }
 
@@ -683,12 +683,12 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.sm-link a:hover p{
+.sm-link a:hover p {
   transform: translateX(0);
   opacity: 100%;
 }
 
-.sm-link a:hover svg{
+.sm-link a:hover svg {
   opacity: 0;
 }
 
@@ -719,18 +719,20 @@ body {
 
 
 .service-title {
-      width: 100%;
-      height: 400px; /* Fixed height */
-      background: url("img/offer/other.JPG") center center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: To make text stand out */
-      position: relative;
-      z-index: 1;
+  width: 100%;
+  height: 400px;
+  /* Fixed height */
+  background: url("img/offer/other.JPG") center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  /* Optional: To make text stand out */
+  position: relative;
+  z-index: 1;
 }
 
 .service-title::before {
@@ -739,9 +741,11 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px; /* Adjust the height of the gradient as needed */
+  height: 100px;
+  /* Adjust the height of the gradient as needed */
   background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 30%);
-  z-index: -1; /* To place it behind the main content */
+  z-index: -1;
+  /* To place it behind the main content */
 }
 
 .service-title::after {
@@ -750,23 +754,31 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px; /* Adjust the height of the gradient as needed */
+  height: 100px;
+  /* Adjust the height of the gradient as needed */
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(25, 25, 25, 1) 80%);
-  z-index: -1; /* To place it behind the main content */
+  z-index: -1;
+  /* To place it behind the main content */
 }
 
 .service-title h1 {
   position: relative;
-  z-index: 1; /* Ensure the text is above the ::before pseudo-element */
-  padding: 10px 20px; /* Optional: Add padding around the text */
-  display: inline-block; /* Ensure the h2 width is only as wide as the text */
+  z-index: 1;
+  /* Ensure the text is above the ::before pseudo-element */
+  padding: 10px 20px;
+  /* Optional: Add padding around the text */
+  display: inline-block;
+  /* Ensure the h2 width is only as wide as the text */
 }
 
 .service-title h2 {
   position: relative;
-  z-index: 1; /* Ensure the text is above the ::before pseudo-element */
-  padding: 10px 20px; /* Optional: Add padding around the text */
-  display: inline-block; /* Ensure the h2 width is only as wide as the text */
+  z-index: 1;
+  /* Ensure the text is above the ::before pseudo-element */
+  padding: 10px 20px;
+  /* Optional: Add padding around the text */
+  display: inline-block;
+  /* Ensure the h2 width is only as wide as the text */
 }
 
 .service-title h1::before {
@@ -838,12 +850,14 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(90, 90, 90, 0.192);
-  /* Adjust the alpha value (last parameter) for the desired transparency *//*
+  /* Adjust the alpha value (last parameter) for the desired transparency */
+/*
   z-index: -1;
   border-radius: 15px;
 }*/
 
-p, li {
+p,
+li {
   color: rgb(190, 190, 190);
 }
 
@@ -852,7 +866,7 @@ strong {
 }
 
 hr {
-  background-color:  rgb(190, 190, 190);
+  background-color: rgb(190, 190, 190);
 }
 
 .realisations-container {
@@ -878,7 +892,8 @@ hr {
 
 .realisation-item-photo {
   width: 100%;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
+  padding-top: 100%;
+  /* 1:1 Aspect Ratio */
   position: relative;
   overflow: hidden;
 }
@@ -976,7 +991,8 @@ hr {
   margin: auto;
 }
 
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -992,14 +1008,15 @@ hr {
 }
 
 .prev {
-    left: -5%;
+  left: -5%;
 }
 
 .next {
-    right: -5%;
+  right: -5%;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   color: black;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -1014,16 +1031,17 @@ hr {
   transition: 0.3s;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
 
 .caption-container {
-    text-align: center;
-    padding: 2px 16px;
-    color: white;
+  text-align: center;
+  padding: 2px 16px;
+  color: white;
 }
 
 
@@ -1105,7 +1123,7 @@ hr {
   color: white;
 }
 
-.contact-method button{
+.contact-method button {
   width: 50%;
   padding: 10px;
   border: none;
@@ -1162,4 +1180,68 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
   border-color: #5A5A5A;
+}
+
+
+
+
+
+
+
+
+.pricing-container {
+  background-color: rgba(25, 25, 25, 1);
+  position: relative;
+}
+
+.pricing-content {
+  color: white;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #555;
+}
+
+.pricing-item:last-child {
+  border-bottom: 0;
+}
+
+.pricing-item h3 {
+  flex: 2;
+  font-size: 18px;
+  margin: 0;
+}
+
+.pricing-item .price,
+.pricing-item .time {
+  flex: 1;
+  text-align: right;
+  margin: 0 10px;
+}
+
+.time {
+  padding: 0 20px 0 0;
+}
+
+.pricing-item .description {
+  flex: 3;
+  margin: 0 10px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.pricing-item hr {
+  display: none;
+}
+
+.pricing-item a {
+  color: #1e90ff;
+  text-decoration: underline;
 }
