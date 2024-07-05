@@ -1,5 +1,4 @@
 .gallery-container {
-  /*background-color: rgba(25, 25, 25, 1);*/
   padding: 50px 100px 100px 100px;
   position: relative;
 }
@@ -10,24 +9,7 @@
   overflow-x: hidden;
   position: relative;
   box-sizing: border-box;
-  border-radius: 0 10px 10px 10px;
-}
-
-.gallery-categories {
-  display: flex;
-  align-items: flex-start;
-  flex: 1 1 30px;
-  pointer-events: auto;
-}
-
-.gallery-categories button {
-  color: white;
-  padding: 10px;
-  border: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  transition: all .2s ease-out;
-  pointer-events: auto;
+  border-radius: 10px;
 }
 
 .gallery-categories button:hover {
@@ -53,13 +35,12 @@
   gap: 20px;
   transition: transform 0.5s ease;
   padding: 15px;
-  justify-content: left;
+  justify-content: center;
 }
 
 .gallery-item {
   flex: 1 1 calc(20% - 20px);
   max-width: calc(20% - 20px);
-  /*width: 300px;*/
   border-radius: 10px;
   object-fit: cover;
   overflow: hidden;
