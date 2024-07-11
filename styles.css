@@ -1,3 +1,25 @@
+/* Cały scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Track (tło paska przewijania) */
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+/* Handle (uchwyt paska przewijania) */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+/* Handle na hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5A5A5A;
+}
+
 body {
   margin: 0;
   /*font-family: "Georgia";*/
@@ -134,65 +156,6 @@ body {
   border-radius: 25px;
 }
 
-
-
-.grid-container {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* Two columns with equal width */
-  gap: 20px;
-  /* Gap between grid items */
-  padding: 50px;
-}
-
-.grid-item-img {
-  text-align: right;
-}
-
-.grid-item-p {
-  text-align: left;
-}
-
-/* CSS for the image */
-.grid-item-img img {
-  max-width: 400px;
-  /* Ensure the image doesn't exceed its container */
-  margin-right: 50px;
-  height: auto;
-  /* Maintain aspect ratio */
-}
-
-/* CSS for the text */
-.grid-item-p p {
-  margin-left: 50px;
-  margin-right: 50px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-/* Cały scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-/* Track (tło paska przewijania) */
-::-webkit-scrollbar-track {
-  background: #1A1A1A;
-}
-
-/* Handle (uchwyt paska przewijania) */
-::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 2px;
-}
-
-/* Handle na hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #5A5A5A;
-}
-
 .about-container {
   background-color: rgba(25, 25, 25, 1);
   padding: 50px 0;
@@ -304,22 +267,6 @@ body {
 .slide-in-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-.facebook-iframe {
-  width: 100%;
-  max-width: 600px;
-  /* Adjust based on your design */
-  height: 435px;
-  /* Adjust based on the height specified in the iframe URL */
-  border: 5px solid;
-  /* Remove border */
-  overflow: hidden;
-  /* Hide overflow */
-  margin: 20px 0;
-  /* Add some margin if needed */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  /* Add transition for slide-in effect */
 }
 
 .content {
@@ -877,8 +824,14 @@ hr {
 .realisations-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 20px 50px 20px 50px;
+  padding: 20px 50px;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .realisations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .realisation-item {
@@ -1044,6 +997,7 @@ hr {
   padding: 2px 16px;
   color: white;
 }
+
 
 
 

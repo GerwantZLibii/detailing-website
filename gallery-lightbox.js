@@ -35,6 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function currentSlide(n) {
       showSlides(slideIndex = n);
     }
+
+    document.addEventListener('keydown', function(event) {
+      if (document.getElementById('lightbox').style.display === 'block') {
+          if (event.key === 'ArrowLeft') {
+              plusSlides(-1);
+          } else if (event.key === 'ArrowRight') {
+              plusSlides(1);
+          } else if (event.key === 'Escape') {
+              closeLightbox();
+          }
+      }
+  });
   
   
   
