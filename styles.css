@@ -831,6 +831,8 @@ hr {
 @media (max-width: 768px) {
   .realisations-grid {
     grid-template-columns: repeat(3, 1fr);
+    padding: 10px 20px;
+    gap: 5px;
   }
 }
 
@@ -1263,7 +1265,7 @@ textarea:focus {
 }
 
 .about-mission-img {
-  background: url("img/realisations/38.JPG");
+  background: url("img/realisations/38.jpg");
 }
 
 .about-who-img {
