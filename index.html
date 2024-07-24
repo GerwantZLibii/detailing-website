@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orzeł Detailing</title>
   <link rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="styles.css">
@@ -16,16 +17,20 @@
 <body>
   <div class="logo-bar" id="logo-bar">
     <img class="logo" src="img/logo.png" alt="">
-  </div>
-  <div id="navbar" class="navbar absolute">
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+        <span></span>
+    </label>
+</div>
+<div id="navbar" class="navbar absolute">
     <div class="main-navbar">
-      <a href="#" id="navbar-home">Strona Główna</a>
-      <a href="offer.html" id="navbar-offer">Oferta</a>
-      <a href="gallery.html" id="navbar-gallery">Realizacje</a>
-      <a href="about.html" id="navbar-about">O nas</a>
-      <a href="contact.html" id="navbar-contact">Kontakt</a>
+        <a href="index.html" id="navbar-home">Strona Główna</a>
+        <a href="offer.html" id="navbar-offer">Oferta</a>
+        <a href="gallery.html" id="navbar-gallery">Realizacje</a>
+        <a href="about.html" id="navbar-about">O nas</a>
+        <a href="contact.html" id="navbar-contact">Kontakt</a>
     </div>
-  </div>
+</div>
   <div class="sm-link">
     <a class="instagram" href="https://www.instagram.com/orzel_detailing/">
       <p>@orzel_detailing</p>
@@ -107,7 +112,7 @@
             <div class="gallery-item more">
               <a href="gallery.html">
                 <div class="image-container">
-                  <div class="blur-overlay"></div>
+                  <img class="blur-overlay" src="img/realisations/6.jpg" alt="">
                   <div class="dark-overlay"></div>
                   <div class="centered-text">Zobacz więcej</div>
                 </div>
@@ -122,34 +127,32 @@
           <h2>O nas</h2>
         </div>
         <div class="about-content">
-          <div class="about-content-center">
-            <p class="slide-in">Orzeł Detailing to nowoczesne studio detailingowe, które mieści się w Markach przy ul.
-              Wereszczakówny 12. Otwarte w 2024 roku przez dwóch pasjonatów motoryzacji, studio szybko zdobyło uznanie
-              wśród właścicieli samochodów, którzy szukają najwyższej jakości usług detailingowych.</p>
+          <p class="slide-in">Orzeł Detailing to nowoczesne studio detailingowe, które mieści się w Markach przy ul.
+            Wereszczakówny 12. Otwarte w 2024 roku przez dwóch pasjonatów motoryzacji, studio szybko zdobyło uznanie
+            wśród właścicieli samochodów, którzy szukają najwyższej jakości usług detailingowych.</p>
 
-            <h3 class="line-anim">Nasze Doświadczenie</h3>
-            <p class="slide-in">Przez ostatnie kilka lat zdobywaliśmy doświadczenie, pracując w renomowanych salonach
-              samochodowych takich marek jak Porsche, Audi, BMW. Praca z luksusowymi pojazdami nauczyła nas dbałości o
-              każdy detal i zrozumienia, jak ważna jest perfekcja w każdym aspekcie detailingowych usług.</p>
+          <h3 class="line-anim">Nasze Doświadczenie</h3>
+          <p class="slide-in">Przez ostatnie kilka lat zdobywaliśmy doświadczenie, pracując w renomowanych salonach
+            samochodowych takich marek jak Porsche, Audi, BMW. Praca z luksusowymi pojazdami nauczyła nas dbałości o
+            każdy detal i zrozumienia, jak ważna jest perfekcja w każdym aspekcie detailingowych usług.</p>
 
-            <h3 class="line-anim">Nasza Misja i Wizja</h3>
-            <p class="slide-in">Zdobyte doświadczenie i nieustanna chęć do dalszego rozwoju pozwoliły nam otworzyć
-              własne studio, w którym na co dzień dążymy do perfekcyjnie wykonanych zleceń. Zadowolenie naszych klientów
-              jest dla nas priorytetem i kwintesencją naszej pracy. W Orzeł Detailing wierzymy, że każda usługa powinna
-              być wykonana z najwyższą starannością i pasją.</p>
+          <h3 class="line-anim">Nasza Misja i Wizja</h3>
+          <p class="slide-in">Zdobyte doświadczenie i nieustanna chęć do dalszego rozwoju pozwoliły nam otworzyć
+            własne studio, w którym na co dzień dążymy do perfekcyjnie wykonanych zleceń. Zadowolenie naszych klientów
+            jest dla nas priorytetem i kwintesencją naszej pracy. W Orzeł Detailing wierzymy, że każda usługa powinna
+            być wykonana z najwyższą starannością i pasją.</p>
 
-            <h3 class="line-anim">Nasze Motto</h3>
-            <p class="slide-in">Nasze motto <strong>“Każdy detal ma znaczenie”</strong> idealnie odzwierciedla nasze
-              podejście do wykonywanej pracy. Skupiamy się na najdrobniejszych szczegółach, aby zapewnić, że każdy
-              samochód, który opuszcza nasze studio, wygląda jak nowy i jest doskonale zabezpieczony przed codziennymi
-              zagrożeniami.</p>
+          <h3 class="line-anim">Nasze Motto</h3>
+          <p class="slide-in">Nasze motto <strong>“Każdy detal ma znaczenie”</strong> idealnie odzwierciedla nasze
+            podejście do wykonywanej pracy. Skupiamy się na najdrobniejszych szczegółach, aby zapewnić, że każdy
+            samochód, który opuszcza nasze studio, wygląda jak nowy i jest doskonale zabezpieczony przed codziennymi
+            zagrożeniami.</p>
 
-            <p class="slide-in"><strong>Zaufaj Orzeł Detailing</strong> i pozwól nam zadbać o Twój samochód z pasją i
-              profesjonalizmem. Twoja satysfakcja jest dla nas najważniejsza!</p>
+          <p class="slide-in"><strong>Zaufaj Orzeł Detailing</strong> i pozwól nam zadbać o Twój samochód z pasją i
+            profesjonalizmem. Twoja satysfakcja jest dla nas najważniejsza!</p>
 
-            <a href="about.html"><button class="transparent-button">Dowiedz się więcej!</button></a>
+          <a href="about.html"><button class="transparent-button">Dowiedz się więcej!</button></a>
 
-          </div>
         </div>
       </div>
     </div>

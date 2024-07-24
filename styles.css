@@ -22,13 +22,11 @@
 
 body {
   margin: 0;
-  /*font-family: "Georgia";*/
   font-family: 'Alata';
   color: white;
 }
 
 .logo-bar {
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,12 +35,25 @@ body {
 }
 
 .logo {
-  margin-right: auto;
-  /* Ustawia logo na lewej stronie */
-  margin-left: auto;
-  /* Ustawia logo na prawej stronie */
+  margin: auto;
   height: auto;
   width: 7%;
+}
+
+@media (max-width: 768px) {
+  .logo-bar {
+    z-index: 9999999;
+    opacity: 90%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 15%;
+    margin-left: 20px;
+  }
 }
 
 .absolute {
@@ -52,10 +63,10 @@ body {
 #navbar {
   z-index: 999;
   overflow: hidden;
+  position: absolute;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center content in navbar */
   align-items: center;
-  /* Wyrównanie w pionie */
   background-color: black;
   width: 100%;
 }
@@ -66,12 +77,11 @@ body {
   transition: all .2s ease-out;
 }
 
-
 .main-navbar {
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  /* Wypełnia przestrzeń między .main-navbar a .sm-navbar */
+  flex-direction: row; /* Set direction to row for desktop view */
 }
 
 .main-navbar a {
@@ -88,17 +98,120 @@ body {
 
 .main-navbar a::after {
   content: '•';
-  /* Ustawienie kropki */
   position: absolute;
   right: -15px;
-  /* Pozycja kropki na prawo od linku */
   color: white;
-  /* Dopasuj kolor kropki */
   pointer-events: none;
 }
 
 .main-navbar a:last-child::after {
   content: '';
+}
+
+.menu-icon {
+  display: none; /* Initially hide the menu icon */
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+  margin: 20px 0;
+}
+
+.menu-icon span,
+.menu-icon span::before,
+.menu-icon span::after {
+  content: '';
+  display: block;
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.menu-icon span::before,
+.menu-icon span::after {
+  position: absolute;
+}
+
+.menu-icon span::before {
+  top: -8px;
+}
+
+.menu-icon span::after {
+  bottom: -8px;
+}
+
+#menu-toggle {
+  display: none; /* Hide the checkbox */
+}
+
+#menu-toggle:checked + .menu-icon span {
+  background-color: transparent;
+}
+
+#menu-toggle:checked + .menu-icon span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-icon span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-toggle:checked ~ .main-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slide-down 0.5s ease-in-out;
+}
+
+#menu-toggle:checked + .menu-icon + #navbar {
+  display: block;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  .main-navbar {
+    display: none; /* Hide the navbar links */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+    background-color: black; /* Ensure background is visible when expanded */
+    position: absolute;
+    top: 60px; /* Adjust the top position to fit below the logo-bar */
+    left: 0;
+  }
+
+  .menu-icon {
+    display: inline-block; /* Show the menu icon */
+    margin-right: 35px;
+  }
+
+  .main-navbar a {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center; /* Center align text */
+  }
+
+  .menu-icon {
+    position: static;
+  }
+
+  body.no-scroll {
+    overflow: hidden; /* Prevent scrolling */
+  }
 }
 
 .main-navbar img {
@@ -111,6 +224,7 @@ body {
   top: 0;
   width: 100%;
 }
+
 
 .content-background {
   background-image: url("img/bg.jpeg");
@@ -162,11 +276,6 @@ body {
   position: relative;
 }
 
-.about-content {
-  padding: 0px 50px 0px 50px;
-  display: flex;
-}
-
 .about-content a {
   color: #1e90ff;
   font-size: 2.5em;
@@ -179,21 +288,26 @@ body {
   color: #5A5A5A;
 }
 
-.about-content-left {
-  background: url("img/antek.JPG") center center;
-  width: 50%;
-}
-
-.about-content-center {
+.about-content {
   max-width: 1000px;
   margin: auto;
-  padding: 0px 50px 25px 50px;
+  padding: 0px 100px 25px 100px;
 }
 
-.about-content-right {
-  background: url("img/bartek.png") center center;
-  width: 50%;
+@media (max-width: 768px) {
+  .intro {
+    margin-top: 62px;
+  }
+
+  .about-content {
+    padding: 0px 30px 25px 30px;
+  }
 }
+
+
+
+
+
 
 .section::before {
   z-index: 9999;
@@ -290,7 +404,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   height: 750px;
-
 }
 
 .offer-grid-item {
@@ -460,6 +573,29 @@ body {
   transition: 0.3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .offer-container {
+    padding: 50px 20px 100px 20px;
+    position: relative;
+  }
+
+  .offer-grid {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    height: 2000px;
+  }
+
+  .offer-grid-item, .offer-grid-item::before {
+    border-radius: 15px;
+  }
+}
+
+
+
+
+
 
 
 /* FOOTER */
@@ -523,6 +659,10 @@ body {
   margin-top: 0;
 }
 
+.footer-linker p:last-child {
+  margin-bottom: 0px;
+}
+
 .footer-linker::after {
   content: '';
   position: absolute;
@@ -579,7 +719,28 @@ body {
   transform: translateX(-50%);
 }
 
+@media (max-width: 768px) {
+  .column {
+    padding-top: 0px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-row {
+    flex-direction: column;
+  }
 
+  .footer-first-row h3 {
+    margin-bottom: 20px;
+  }
+
+  .footer-linker::after, .footer-contact::after {
+    height: 0px;
+  }
+
+  .footer-address iframe {
+    width: 95%;
+  }
+}
 
 
 
@@ -677,6 +838,12 @@ body {
   /* Optional: To make text stand out */
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .service-title {
+    height: 250px;
+  }
 }
 
 .service-title::before {
@@ -1244,7 +1411,6 @@ textarea:focus {
   margin: auto;
   display: flex;
   padding: 20px 0 20px 0;
-  align-items: stretch; /* Ensure the row items have the same height */
 }
 
 .about-content-para-column {
@@ -1287,7 +1453,7 @@ textarea:focus {
 
 .about-right {
   box-shadow: -0px 10px 20px rgba(0, 0, 0, 0.5), 10px -10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 0 10px 10px 0;  
+  border-radius: 0 10px 10px 0px;  
 }
 
 .about-content-row p {
@@ -1296,7 +1462,15 @@ textarea:focus {
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .about-page-content {
+    width: 90%;
+  }
 
+  .about-content-row {
+    flex-direction: column;
+  }
+}
 
 
 .dark-overlay {
@@ -1310,12 +1484,6 @@ textarea:focus {
 }
 
 .blur-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('img/realisations/6.jpg'); /* Ustawienie zdjęcia jako tło do efektu blur */
   background-size: cover;
   background-position: center;
   filter: blur(7px); /* Wartość 10px określa stopień rozmycia */

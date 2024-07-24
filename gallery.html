@@ -6,7 +6,6 @@
     <title>Realizacje - Orzeł Detailing</title>
     <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="gallery.css">
     <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
     <script src="scripts.js" charset="utf-8"></script>
@@ -15,16 +14,20 @@
   </head>
   <body>
     <div class="logo-bar" id="logo-bar">
-      <img class="logo" src="img/logo.png" alt="">
+        <img class="logo" src="img/logo.png" alt="">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+        </label>
     </div>
     <div id="navbar" class="navbar absolute">
         <div class="main-navbar">
             <a href="index.html" id="navbar-home">Strona Główna</a>
-            <a href="offer.html">Oferta</a>
+            <a href="offer.html" id="navbar-offer">Oferta</a>
             <a href="gallery.html" id="navbar-gallery">Realizacje</a>
-            <a href="about.html">O nas</a>
+            <a href="about.html" id="navbar-about">O nas</a>
             <a href="contact.html" id="navbar-contact">Kontakt</a>
-          </div>
+        </div>
     </div>
     <div class="content-background">
       <div class="content">

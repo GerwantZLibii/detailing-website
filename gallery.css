@@ -75,3 +75,23 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 50px 20px 100px 20px;
+  }
+
+  .gallery {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .gallery-item {
+    flex: 1 1 calc(100%);
+    max-width: calc(100%);
+  }
+
+  .gallery-item div {
+    font-size: 40px;
+  }
+}
