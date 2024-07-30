@@ -10,13 +10,27 @@
     <link rel="stylesheet" href="gallery.css">
     <link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
     <script src="scripts.js" charset="utf-8"></script>
-    <script src="intro-video.js"></script>
 </head>
 
 <body>
-    <div class="logo-bar" id="logo-bar">
-        <img class="logo" src="img/logo.png" alt="">
+  <div class="logo-bar" id="logo-bar">
+    <div class="top-bar">
+      <img class="logo" src="img/logo.png" alt="">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+      </label>
     </div>
+    <div class="mobile-nav-menu">
+      <div class="mobile-navbar">
+        <a href="index.html">Strona Główna</a>
+        <a href="offer.html">Oferta</a>
+        <a href="gallery.html">Realizacje</a>
+        <a href="about.html">O nas</a>
+        <a href="contact.html">Kontakt</a>
+      </div>
+    </div>
+  </div>
     <div id="navbar" class="navbar absolute">
         <div class="main-navbar">
             <a href="index.html" id="navbar-home">Strona Główna</a>
@@ -68,10 +82,12 @@
                                     ale także doskonale zabezpieczony przed codziennymi zagrożeniami.</p>
                             </div>
                         <div class="about-content-img-column about-right about-mission-img">
+                          <img src="img/realisations/38.jpg" alt="">
                             </div>
                     </div>
                     <div class="about-content-row">
                         <div class="about-content-img-column about-left about-who-img">
+                          <img src="img/chlopaki.png" alt="">
                         </div>
                         <div class="about-content-para-column about-right">
                             <h3 class="line-anim">Kim Jesteśmy?</h3>
