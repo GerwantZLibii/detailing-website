@@ -27,10 +27,10 @@ body {
 }
 
 .logo-bar {
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
   width: 100%;
 }
 
@@ -41,7 +41,6 @@ body {
   background-color: black;
   width: 100%;
   z-index: 9999999;
-  opacity: 90%;
   top: 0;
   justify-content: space-between;
 }
@@ -55,7 +54,7 @@ body {
 
 @media (max-width: 768px) {
   .logo-bar {
-    z-index: 9999999;
+    z-index: 999999;
     opacity: 90%;
     position: fixed;
     top: 0;
@@ -187,14 +186,15 @@ body {
 }
 
 .mobile-nav-menu {
-  opacity: 100%;
-  z-index: 9999999999999999;
   display: none;
+  transform: translateY(-300px);
+  z-index: 9999;
   text-align: center;
   left: 0;
   width: 100%;
+  height: 0;
   background-color: black;
-  transition: opacity 0.3s;
+  transition: all .3s;
 }
 
 .mobile-nav-menu .mobile-navbar a {
@@ -208,20 +208,9 @@ body {
   background-color: grey; /* Szary kolor tła po najechaniu */
 }
 
-.top-bar:has(> #menu-toggle:checked) + .mobile-nav-menu {
-  display: block;
-  opacity: 0%;
-}
-
-@keyframes slide-down {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.top-bar:has(> #menu-toggle:checked) ~ .mobile-nav-menu {
+  transform: translateY(0px);
+  height: 100%;
 }
 
 /* Media query for mobile view */
@@ -239,6 +228,10 @@ body {
   .menu-icon {
     display: inline-block; /* Show the menu icon */
     margin-right: 35px;
+  }
+
+  .mobile-nav-menu {
+    display: block;
   }
 
   .main-navbar a {
@@ -1135,8 +1128,8 @@ hr {
 .lightbox {
   display: none;
   position: fixed;
-  z-index: 99999;
-  padding-top: 50px;
+  z-index: 9999999;
+  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -1149,8 +1142,8 @@ hr {
   position: relative;
   margin: auto;
   padding: 0;
-  height: 100%;
-  width: 90%;
+  height: 75%;
+  width: 75%;
   max-width: 1000px;
   max-height: 90%;
   display: flex;
@@ -1189,11 +1182,11 @@ hr {
 }
 
 .prev {
-  left: -5%;
+  left: 8%;
 }
 
 .next {
-  right: -5%;
+  right: 8%;
 }
 
 .prev:hover,
@@ -1204,6 +1197,7 @@ hr {
 
 .close {
   position: absolute;
+  z-index: 9999999;
   top: 15px;
   right: 35px;
   color: #fff;
@@ -1225,7 +1219,28 @@ hr {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .lightbox {
+    padding-top: 150px;
+  }
 
+  .lightbox-content {
+    height: 75%;
+    width: 75%;
+  }
+
+  .close {
+    top: 10%;
+  }
+
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+}
 
 
 
@@ -1366,7 +1381,7 @@ textarea:focus {
 
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .contact-options {
@@ -1380,6 +1395,7 @@ textarea:focus {
   .contact-method {
     flex: 1;
     max-width: 300px;
+    width: 100%;
     text-align: center;
     margin-bottom: 50px;
   }

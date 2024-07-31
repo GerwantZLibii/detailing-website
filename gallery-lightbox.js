@@ -21,10 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
     
     function openLightbox() {
       document.getElementById("lightbox").style.display = "block";
+      document.body.style.overflow = "hidden";
     }
     
     function closeLightbox() {
       document.getElementById("lightbox").style.display = "none";
+      document.body.style.overflow = "visible";
     }
     
     
